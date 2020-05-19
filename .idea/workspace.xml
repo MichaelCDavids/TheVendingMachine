@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4ee00c-a4cd-4104-a5ac-677465e91194" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,96 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
+  <component name="RunManager" selected="JUnit.OverloadedVendingMachineTest">
+    <configuration name="OverloadedVendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineAddStockProductMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
+      <option name="METHOD_NAME" value="testOverloadedVendingMachineAddStockProductMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineBuyOneOfEachMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
+      <option name="METHOD_NAME" value="testOverloadedVendingMachineBuyOneOfEachMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineBuySoftDrinkMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
+      <option name="METHOD_NAME" value="testOverloadedVendingMachineBuySoftDrinkMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineGetStockForProductMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
+      <option name="METHOD_NAME" value="testOverloadedVendingMachineGetStockForProductMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OverloadedVendingMachineTest" />
+        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineAddStockProductMethod" />
+        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineBuyOneOfEachMethod" />
+        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineBuySoftDrinkMethod" />
+        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineGetStockForProductMethod" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -51,9 +141,29 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="322" y="201" width="756" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589880130567">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state x="322" y="201" width="756" height="390" key="#com.intellij.fileTypes.FileTypeChooser/45.27.1321.741@45.27.1321.741" timestamp="1589880130567" />
     <state x="390" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589879313467">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
     <state x="390" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/45.27.1321.741@45.27.1321.741" timestamp="1589879313467" />
+    <state width="1275" height="175" key="GridCell.Tab.0.bottom" timestamp="1589891809812">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state width="1275" height="175" key="GridCell.Tab.0.bottom/45.27.1321.741@45.27.1321.741" timestamp="1589891809812" />
+    <state width="1275" height="175" key="GridCell.Tab.0.center" timestamp="1589891809811">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state width="1275" height="175" key="GridCell.Tab.0.center/45.27.1321.741@45.27.1321.741" timestamp="1589891809811" />
+    <state width="1275" height="175" key="GridCell.Tab.0.left" timestamp="1589891809810">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state width="1275" height="175" key="GridCell.Tab.0.left/45.27.1321.741@45.27.1321.741" timestamp="1589891809810" />
+    <state width="1275" height="175" key="GridCell.Tab.0.right" timestamp="1589891809811">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state width="1275" height="175" key="GridCell.Tab.0.right/45.27.1321.741@45.27.1321.741" timestamp="1589891809811" />
   </component>
 </project>
