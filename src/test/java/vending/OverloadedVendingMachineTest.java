@@ -99,4 +99,59 @@ public class OverloadedVendingMachineTest {
         assertEquals(32,ovm.getStock());
     }
 
+    @Test
+    void testOverloadedVendingMachineBuyProductSoftDrinkQtyMethod(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
+        ovm.buy(ovm.softDrink,5);
+        assertEquals(5,ovm.getStock(ovm.softDrink));
+    }
+
+    @Test
+    void testOverloadedVendingMachineBuyProductSaltySnackQtyMethod(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
+        ovm.buy(ovm.saltySnack,5);
+        assertEquals(2,ovm.getStock(ovm.saltySnack));
+    }
+
+    @Test
+    void testOverloadedVendingMachineBuyProductChocolateQtyMethod(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
+        ovm.buy(ovm.chocolate,5);
+        assertEquals(1,ovm.getStock(ovm.chocolate));
+    }
+
+    @Test
+    void testOverloadedVendingMachineBuyProductQtyMethod(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
+        ovm.buy(ovm.product,2);
+        assertEquals(17,ovm.getStock());
+    }
+
+    @Test
+    void testOverloadedVendingMachineAddStockChocolateMethodWithQuantity(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
+        ovm.addStock(ovm.chocolate,10);
+        assertEquals(20,ovm.getStock(ovm.chocolate));
+    }
+
+    @Test
+    void testOverloadedVendingMachineAddStockSoftDrinkMethodWithQuantity(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
+        ovm.addStock(ovm.softDrink,10);
+        assertEquals(20,ovm.getStock(ovm.softDrink));
+    }
+
+    @Test
+    void testOverloadedVendingMachineAddStockSaltySnackMethodWithQuantity(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
+        ovm.addStock(ovm.saltySnack,10);
+        assertEquals(20,ovm.getStock(ovm.saltySnack));
+    }
+    @Test
+    void testOverloadedVendingMachineAddStockOfEachMethodWithQuantity(){
+        OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
+        ovm.addStock(ovm.saltySnack,10);
+        assertEquals(60,ovm.getStock());
+    }
+
 }
