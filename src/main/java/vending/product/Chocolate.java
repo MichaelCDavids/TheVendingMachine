@@ -9,6 +9,10 @@ public class Chocolate extends  Product {
         return "This is a Chocolate";
     }
 
+    public int getStockLevel() {
+        return stockLevel;
+    }
+
     public void setStockLevel( int stockLevel ) {
         this.stockLevel = stockLevel;
     }

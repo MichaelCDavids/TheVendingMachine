@@ -9,6 +9,10 @@ public class SaltySnack extends Product {
         return "This is a Salty Snack";
     }
 
+    public int getStockLevel() {
+        return stockLevel;
+    }
+
     public void setStockLevel( int stockLevel ) {
         this.stockLevel = stockLevel;
     }

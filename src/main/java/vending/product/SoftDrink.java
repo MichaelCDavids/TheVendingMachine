@@ -9,6 +9,10 @@ public class SoftDrink extends Product {
         return "This is a SoftDrink";
     }
 
+    public int getStockLevel() {
+        return stockLevel;
+    }
+
     public void setStockLevel( int stockLevel ) {
         this.stockLevel = stockLevel;
     }
