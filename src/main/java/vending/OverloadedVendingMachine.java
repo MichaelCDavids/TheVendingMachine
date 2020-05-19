@@ -77,14 +77,14 @@ public class OverloadedVendingMachine {
         this.softDrink.setStockLevel(getStock(softDrink)+quantity);
     }
 
-    void addStockQty(Product product, int quantity){
+    private void addStockQty(Product product, int quantity){
         addStockQty(this.softDrink,quantity);
         addStockQty(this.chocolate,quantity);
         addStockQty(this.saltySnack,quantity);
     }
 
 
-    void addStockQuantity(Product product, int qty){
+    private void addStockQuantity(Product product, int qty){
         addStockQty(product,qty);
     }
 
