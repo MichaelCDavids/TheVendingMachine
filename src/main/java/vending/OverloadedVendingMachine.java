@@ -41,6 +41,12 @@ public class OverloadedVendingMachine {
         buy(this.saltySnack);
     }
 
+    public void buy(Product product, int qty){
+        for (int i=0; i<qty;i++){
+            buy(product);
+        }
+    }
+
     public void addStock(SoftDrink softDrink){
         this.softDrink.setStockLevel(getStock(softDrink)+3);
     }
@@ -57,6 +63,33 @@ public class OverloadedVendingMachine {
         addStock(this.softDrink);
         addStock(this.chocolate);
         addStock(this.saltySnack);
+    }
+
+    public void addStockQty(Chocolate chocolate, int quantity){
+        this.chocolate.setStockLevel(getStock(chocolate)+quantity);
+    }
+
+    public void addStockQty(SaltySnack saltySnack, int quantity){
+        this.saltySnack.setStockLevel(getStock(saltySnack)+quantity);
+    }
+
+    public void addStockQty(SoftDrink softDrink, int quantity){
+        this.softDrink.setStockLevel(getStock(softDrink)+quantity);
+    }
+
+    void addStockQty(Product product, int quantity){
+        addStockQty(this.softDrink,quantity);
+        addStockQty(this.chocolate,quantity);
+        addStockQty(this.saltySnack,quantity);
+    }
+
+
+    void addStockQuantity(Product product, int qty){
+        addStockQty(product,qty);
+    }
+
+    public void addStock(Product product, int qty){
+        addStockQuantity(product,qty);
     }
 
     public int getStock(SoftDrink softDrink){
