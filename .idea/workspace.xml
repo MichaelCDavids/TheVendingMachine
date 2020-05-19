@@ -4,7 +4,6 @@
     <list default="true" id="9f4ee00c-a4cd-4104-a5ac-677465e91194" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vending/OverloadedVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vending/OverloadedVendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/vending/OverloadedVendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/vending/OverloadedVendingMachineTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vending/OverloadedVendingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vending/OverloadedVendingMachine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/vending/OverloadedVendingMachineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/vending/OverloadedVendingMachineTest.class" afterDir="false" />
     </list>
