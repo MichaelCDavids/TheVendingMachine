@@ -10,6 +10,8 @@ public class OverloadedVendingMachine {
     SaltySnack saltySnack;
     Chocolate chocolate;
 
+    // should keep track of the number of each product type it has in stock.
+
     OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty){
         // set the stockLevel instance variables for each product in the constructor
     }
@@ -29,5 +31,43 @@ public class OverloadedVendingMachine {
     public void buy(Product product){
 
     }
+
+    public void addStock(SoftDrink softDrink){
+
+    }
+
+    public void addStock(SaltySnack saltySnack){
+
+    }
+
+    public void addStock(Chocolate chocolate){
+        // add 1 to this product
+    }
+
+    public void addStock(Product product){
+        // add 3 to each product type
+    }
+
+    public void getStock(SoftDrink softDrink){
+
+    }
+
+    public void getStock(SaltySnack saltySnack){
+
+    }
+
+    public void getStock(Chocolate chocolate){
+        // add 1 to this product
+    }
+
+    public void getStock(Product product){
+        // add 3 to each product type
+    }
+
+
+    public static void main( String[] args ) {
+
+    }
+
 
 }
