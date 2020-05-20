@@ -1,6 +1,10 @@
 package vending;
 
 import org.junit.jupiter.api.Test;
+import vending.product.Chocolate;
+import vending.product.Product;
+import vending.product.SaltySnack;
+import vending.product.SoftDrink;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -16,22 +20,19 @@ public class OverloadedVendingMachineTest {
     @Test
     void testOverloadedVendingMachineGetStockForChocolateMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,30);
-        ovm.getStock(ovm.chocolate);
-        assertEquals(30,ovm.getStock(ovm.chocolate));
+        assertEquals(30,ovm.getStock(new Chocolate()));
     }
 
     @Test
     void testOverloadedVendingMachineGetStockForSaltySnackMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.getStock(ovm.chocolate);
-        assertEquals(7,ovm.getStock(ovm.saltySnack));
+        assertEquals(7,ovm.getStock(new SaltySnack()));
     }
 
     @Test
     void testOverloadedVendingMachineGetStockForSoftDrinkMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.getStock(ovm.chocolate);
-        assertEquals(10,ovm.getStock(ovm.softDrink));
+        assertEquals(10,ovm.getStock(new SoftDrink()));
     }
 
     @Test
@@ -43,114 +44,114 @@ public class OverloadedVendingMachineTest {
     @Test
     void testOverloadedVendingMachineBuySoftDrinkMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.softDrink);
-        ovm.buy(ovm.softDrink);
-        assertEquals(8,ovm.getStock(ovm.softDrink));
+        ovm.buy(new SoftDrink());
+        ovm.buy(new SoftDrink());
+        assertEquals(8,ovm.getStock(new SoftDrink()));
     }
 
     @Test
     void testOverloadedVendingMachineBuySaltySnackMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.saltySnack);
-        ovm.buy(ovm.saltySnack);
-        assertEquals(5,ovm.getStock(ovm.saltySnack));
+        ovm.buy(new SaltySnack());
+        ovm.buy(new SaltySnack());
+        assertEquals(5,ovm.getStock(new SaltySnack()));
     }
 
     @Test
     void testOverloadedVendingMachineBuyChocolateMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.chocolate);
-        ovm.buy(ovm.chocolate);
-        assertEquals(4,ovm.getStock(ovm.chocolate));
+        ovm.buy(new Chocolate());
+        ovm.buy(new Chocolate());
+        assertEquals(4,ovm.getStock(new Chocolate()));
     }
 
     @Test
     void testOverloadedVendingMachineBuyOneOfEachMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.product);
+        ovm.buy(new Product());
         assertEquals(20,ovm.getStock());
     }
 
     @Test
     void testOverloadedVendingMachineAddStockSoftDrinkMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.addStock(ovm.softDrink);
-        assertEquals(13,ovm.getStock(ovm.softDrink));
+        ovm.addStock(new SoftDrink());
+        assertEquals(11,ovm.getStock(new SoftDrink()));
     }
 
     @Test
-    void testOverloadedVendingMachineAddStockChoclateMethod(){
+    void testOverloadedVendingMachineAddStockChocolateMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.addStock(ovm.chocolate);
-        assertEquals(9,ovm.getStock(ovm.chocolate));
+        ovm.addStock(new Chocolate());
+        assertEquals(7,ovm.getStock(new Chocolate()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockSaltySnackMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.addStock(ovm.saltySnack);
-        assertEquals(10,ovm.getStock(ovm.saltySnack));
+        ovm.addStock(new SaltySnack());
+        assertEquals(8,ovm.getStock(new SaltySnack()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockProductMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.addStock(ovm.product);
-        assertEquals(32,ovm.getStock());
+        ovm.addStock(new Product());
+        assertEquals(26,ovm.getStock());
     }
 
     @Test
     void testOverloadedVendingMachineBuyProductSoftDrinkQtyMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.softDrink,5);
-        assertEquals(5,ovm.getStock(ovm.softDrink));
+        ovm.buy(new SoftDrink(),5);
+        assertEquals(5,ovm.getStock(new SoftDrink()));
     }
 
     @Test
     void testOverloadedVendingMachineBuyProductSaltySnackQtyMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.saltySnack,5);
-        assertEquals(2,ovm.getStock(ovm.saltySnack));
+        ovm.buy(new SaltySnack(),5);
+        assertEquals(2,ovm.getStock(new SaltySnack()));
     }
 
     @Test
     void testOverloadedVendingMachineBuyProductChocolateQtyMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.chocolate,5);
-        assertEquals(1,ovm.getStock(ovm.chocolate));
+        ovm.buy(new Chocolate(),5);
+        assertEquals(1,ovm.getStock(new Chocolate()));
     }
 
     @Test
     void testOverloadedVendingMachineBuyProductQtyMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
-        ovm.buy(ovm.product,2);
+        ovm.buy(new Product(),2);
         assertEquals(17,ovm.getStock());
     }
 
     @Test
     void testOverloadedVendingMachineAddStockChocolateMethodWithQuantity(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
-        ovm.addStock(ovm.chocolate,10);
-        assertEquals(20,ovm.getStock(ovm.chocolate));
+        ovm.addStock(new Chocolate(),10);
+        assertEquals(20,ovm.getStock(new Chocolate()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockSoftDrinkMethodWithQuantity(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
-        ovm.addStock(ovm.softDrink,10);
-        assertEquals(20,ovm.getStock(ovm.softDrink));
+        ovm.addStock(new SoftDrink(),10);
+        assertEquals(20,ovm.getStock(new SoftDrink()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockSaltySnackMethodWithQuantity(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
-        ovm.addStock(ovm.saltySnack,10);
-        assertEquals(20,ovm.getStock(ovm.saltySnack));
+        ovm.addStock(new SaltySnack(),10);
+        assertEquals(20,ovm.getStock(new SaltySnack()));
     }
     @Test
     void testOverloadedVendingMachineAddStockOfEachMethodWithQuantity(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,10,10);
-        ovm.addStock(ovm.saltySnack,10);
+        ovm.addStock(new Product(),10);
         assertEquals(60,ovm.getStock());
     }
 
