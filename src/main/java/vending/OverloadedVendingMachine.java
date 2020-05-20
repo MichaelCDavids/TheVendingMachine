@@ -6,39 +6,39 @@ import vending.product.SaltySnack;
 import vending.product.SoftDrink;
 
 public class OverloadedVendingMachine {
-    Product product = new Product();
-    SoftDrink softDrink = new SoftDrink();
-    SaltySnack saltySnack = new SaltySnack();
-    Chocolate chocolate = new Chocolate();
+
+    private int softDrinkStock;
+    private int saltySnackStock;
+    private int chocolateStock;
 
     public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty){
-        this.softDrink.setStockLevel(softDrinkQty);
-        this.saltySnack.setStockLevel(saltySnacksQty);
-        this.chocolate.setStockLevel(chocolatesQty);
+        this.softDrinkStock = softDrinkQty;
+        this.saltySnackStock = saltySnacksQty;
+        this.chocolateStock =chocolatesQty;
     }
 
     public void buy(SoftDrink softDrink){
-        if(getStock(softDrink)>0) {
-            this.softDrink.setStockLevel(this.softDrink.getStockLevel() - 1);
+        if(this.softDrinkStock>0) {
+            this.softDrinkStock--;
         }
     }
 
     public void buy(SaltySnack saltySnack){
-        if(getStock(saltySnack)>0){
-            this.saltySnack.setStockLevel(this.saltySnack.getStockLevel()-1);
+        if(this.saltySnackStock>0){
+            this.saltySnackStock--;
         }
     }
 
     public void buy(Chocolate chocolate){
-        if(getStock(chocolate)>0){
-            this.chocolate.setStockLevel(this.chocolate.getStockLevel()-1);
+        if(this.chocolateStock>0){
+            this.chocolateStock--;
         }
     }
 
     public void buy(Product product){
-        buy(this.softDrink);
-        buy(this.chocolate);
-        buy(this.saltySnack);
+        buy(new SoftDrink());
+        buy(new SaltySnack());
+        buy(new Chocolate());
     }
 
     public void buy(Product product, int qty){
@@ -48,39 +48,39 @@ public class OverloadedVendingMachine {
     }
 
     public void addStock(SoftDrink softDrink){
-        this.softDrink.setStockLevel(getStock(softDrink)+3);
+        this.softDrinkStock++;
     }
 
     public void addStock(SaltySnack saltySnack){
-        this.saltySnack.setStockLevel(getStock(saltySnack)+3);
+        this.saltySnackStock++;
     }
 
     public void addStock(Chocolate chocolate){
-        this.chocolate.setStockLevel(getStock(chocolate)+3);
+        this.chocolateStock++;
     }
 
     public void addStock(Product product){
-        addStock(this.softDrink);
-        addStock(this.chocolate);
-        addStock(this.saltySnack);
+        addStock(new Chocolate());
+        addStock(new SoftDrink());
+        addStock(new SaltySnack());
     }
 
     public void addStockQty(Chocolate chocolate, int quantity){
-        this.chocolate.setStockLevel(getStock(chocolate)+quantity);
+        this.chocolateStock+=quantity;
     }
 
     public void addStockQty(SaltySnack saltySnack, int quantity){
-        this.saltySnack.setStockLevel(getStock(saltySnack)+quantity);
+        this.saltySnackStock+=quantity;
     }
 
     public void addStockQty(SoftDrink softDrink, int quantity){
-        this.softDrink.setStockLevel(getStock(softDrink)+quantity);
+        this.softDrinkStock+=quantity;
     }
 
     private void addStockQty(Product product, int quantity){
-        addStockQty(this.softDrink,quantity);
-        addStockQty(this.chocolate,quantity);
-        addStockQty(this.saltySnack,quantity);
+        addStockQty(new Chocolate(),quantity);
+        addStockQty(new SaltySnack(),quantity);
+        addStockQty(new SoftDrink(),quantity);
     }
 
 
@@ -93,19 +93,19 @@ public class OverloadedVendingMachine {
     }
 
     public int getStock(SoftDrink softDrink){
-        return this.softDrink.getStockLevel();
+        return this.softDrinkStock;
     }
 
     public int getStock(SaltySnack saltySnack){
-        return  this.saltySnack.getStockLevel();
+        return  this.saltySnackStock;
     }
 
     public int getStock(Chocolate chocolate){
-        return this.chocolate.getStockLevel();
+        return this.chocolateStock;
     }
 
     public int getStock(){
-        return getStock(this.chocolate) + getStock(this.softDrink)+getStock(this.saltySnack);
+        return this.chocolateStock + this.saltySnackStock + this.softDrinkStock;
     }
 
 
@@ -113,3 +113,4 @@ public class OverloadedVendingMachine {
         System.out.println("Loyolo's Overloaded Vending Machine v1.0.0");
     }
 }
+
