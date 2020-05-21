@@ -48,15 +48,15 @@ public class OverloadedVendingMachine {
     }
 
     public void addStock(SoftDrink softDrink){
-        this.softDrinkStock++;
+        this.softDrinkStock+=3;
     }
 
     public void addStock(SaltySnack saltySnack){
-        this.saltySnackStock++;
+        this.saltySnackStock+=3;
     }
 
     public void addStock(Chocolate chocolate){
-        this.chocolateStock++;
+        this.chocolateStock+=3;
     }
 
     public void addStock(Product product){
