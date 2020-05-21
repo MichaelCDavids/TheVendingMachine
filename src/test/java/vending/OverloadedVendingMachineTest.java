@@ -76,28 +76,28 @@ public class OverloadedVendingMachineTest {
     void testOverloadedVendingMachineAddStockSoftDrinkMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
         ovm.addStock(new SoftDrink());
-        assertEquals(11,ovm.getStock(new SoftDrink()));
+        assertEquals(13,ovm.getStock(new SoftDrink()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockChocolateMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
         ovm.addStock(new Chocolate());
-        assertEquals(7,ovm.getStock(new Chocolate()));
+        assertEquals(9,ovm.getStock(new Chocolate()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockSaltySnackMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
         ovm.addStock(new SaltySnack());
-        assertEquals(8,ovm.getStock(new SaltySnack()));
+        assertEquals(10,ovm.getStock(new SaltySnack()));
     }
 
     @Test
     void testOverloadedVendingMachineAddStockProductMethod(){
         OverloadedVendingMachine ovm = new OverloadedVendingMachine(10,7,6);
         ovm.addStock(new Product());
-        assertEquals(26,ovm.getStock());
+        assertEquals(32,ovm.getStock());
     }
 
     @Test
