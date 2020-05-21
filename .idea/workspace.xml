@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4ee00c-a4cd-4104-a5ac-677465e91194" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vending/ExtendableVendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/vending/product/Muffin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/vending/ExtendableVendingMachineTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vending/OverloadedVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vending/OverloadedVendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vending/product/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vending/product/Chocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vending/product/SaltySnack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vending/product/SaltySnack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vending/product/SoftDrink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vending/product/SoftDrink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/vending/OverloadedVendingMachineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/vending/OverloadedVendingMachineTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/vending/OverloadedVendingMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/vending/OverloadedVendingMachine.class" afterDir="false" />
     </list>
@@ -41,10 +42,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.OverloadedVendingMachineTest">
-    <configuration name="OverloadedVendingMachine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachine" />
+    <configuration name="ExtendableVendingMachineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VendingMachine" />
       <extension name="coverage">
         <pattern>
@@ -52,6 +53,57 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.ExtendableVendingMachineTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExtendableVendingMachineTest.ExtendableVendingMachineAddStockChocolateZeroQtyMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.ExtendableVendingMachineTest" />
+      <option name="METHOD_NAME" value="ExtendableVendingMachineAddStockChocolateZeroQtyMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExtendableVendingMachineTest.ExtendableVendingMachineBuyQtyChocolateMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.ExtendableVendingMachineTest" />
+      <option name="METHOD_NAME" value="ExtendableVendingMachineBuyQtyChocolateMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExtendableVendingMachineTest.ExtendableVendingMachineBuyQtyChocolateTooMuchMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VendingMachine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vending.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="vending" />
+      <option name="MAIN_CLASS_NAME" value="vending.ExtendableVendingMachineTest" />
+      <option name="METHOD_NAME" value="ExtendableVendingMachineBuyQtyChocolateTooMuchMethod" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,61 +123,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineAddStockChocolateMethodWithQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vending.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="vending" />
-      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
-      <option name="METHOD_NAME" value="testOverloadedVendingMachineAddStockChocolateMethodWithQuantity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineAddStockProductMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vending.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="vending" />
-      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
-      <option name="METHOD_NAME" value="testOverloadedVendingMachineAddStockProductMethod" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OverloadedVendingMachineTest.testOverloadedVendingMachineBuyProductQtyMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VendingMachine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="vending.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="vending" />
-      <option name="MAIN_CLASS_NAME" value="vending.OverloadedVendingMachineTest" />
-      <option name="METHOD_NAME" value="testOverloadedVendingMachineBuyProductQtyMethod" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.OverloadedVendingMachineTest" />
-        <item itemvalue="Application.OverloadedVendingMachine" />
-        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineAddStockChocolateMethodWithQuantity" />
-        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineBuyProductQtyMethod" />
-        <item itemvalue="JUnit.OverloadedVendingMachineTest.testOverloadedVendingMachineAddStockProductMethod" />
+        <item itemvalue="JUnit.ExtendableVendingMachineTest" />
+        <item itemvalue="JUnit.ExtendableVendingMachineTest.ExtendableVendingMachineBuyQtyChocolateTooMuchMethod" />
+        <item itemvalue="JUnit.ExtendableVendingMachineTest.ExtendableVendingMachineAddStockChocolateZeroQtyMethod" />
+        <item itemvalue="JUnit.ExtendableVendingMachineTest.ExtendableVendingMachineBuyQtyChocolateMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -151,22 +155,26 @@
       <screen x="45" y="27" width="1321" height="741" />
     </state>
     <state x="390" y="324" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/45.27.1321.741@45.27.1321.741" timestamp="1589879313467" />
-    <state width="1275" height="175" key="GridCell.Tab.0.bottom" timestamp="1589967526565">
+    <state width="1275" height="366" key="GridCell.Tab.0.bottom" timestamp="1590074048563">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state width="1275" height="175" key="GridCell.Tab.0.bottom/45.27.1321.741@45.27.1321.741" timestamp="1589967526565" />
-    <state width="1275" height="175" key="GridCell.Tab.0.center" timestamp="1589967526563">
+    <state width="1275" height="366" key="GridCell.Tab.0.bottom/45.27.1321.741@45.27.1321.741" timestamp="1590074048563" />
+    <state width="1275" height="366" key="GridCell.Tab.0.center" timestamp="1590074048558">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state width="1275" height="175" key="GridCell.Tab.0.center/45.27.1321.741@45.27.1321.741" timestamp="1589967526563" />
-    <state width="1275" height="175" key="GridCell.Tab.0.left" timestamp="1589967526563">
+    <state width="1275" height="366" key="GridCell.Tab.0.center/45.27.1321.741@45.27.1321.741" timestamp="1590074048558" />
+    <state width="1275" height="366" key="GridCell.Tab.0.left" timestamp="1590074048554">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state width="1275" height="175" key="GridCell.Tab.0.left/45.27.1321.741@45.27.1321.741" timestamp="1589967526563" />
-    <state width="1275" height="175" key="GridCell.Tab.0.right" timestamp="1589967526564">
+    <state width="1275" height="366" key="GridCell.Tab.0.left/45.27.1321.741@45.27.1321.741" timestamp="1590074048554" />
+    <state width="1275" height="366" key="GridCell.Tab.0.right" timestamp="1590074048563">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
-    <state width="1275" height="175" key="GridCell.Tab.0.right/45.27.1321.741@45.27.1321.741" timestamp="1589967526564" />
+    <state width="1275" height="366" key="GridCell.Tab.0.right/45.27.1321.741@45.27.1321.741" timestamp="1590074048563" />
+    <state x="350" y="135" width="710" height="522" key="find.popup" timestamp="1589981666138">
+      <screen x="45" y="27" width="1321" height="741" />
+    </state>
+    <state x="350" y="135" width="710" height="522" key="find.popup/45.27.1321.741@45.27.1321.741" timestamp="1589981666138" />
     <state x="368" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1589966689227">
       <screen x="45" y="27" width="1321" height="741" />
     </state>
