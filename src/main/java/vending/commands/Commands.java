@@ -1,4 +1,4 @@
-package vending;
+package vending.commands;
 
 import java.util.Map;
 

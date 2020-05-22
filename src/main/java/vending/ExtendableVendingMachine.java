@@ -1,6 +1,12 @@
 package vending;
 
+import vending.commands.*;
 import vending.product.*;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 
 public class ExtendableVendingMachine {
 
@@ -103,4 +109,5 @@ public class ExtendableVendingMachine {
         }
         return 0;
     }
+
 }
