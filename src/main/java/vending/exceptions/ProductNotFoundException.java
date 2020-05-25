@@ -1,4 +1,4 @@
-package vending.exception;
+package vending.exceptions;
 
 public class ProductNotFoundException extends Exception {
     public ProductNotFoundException(String errorMessage) {

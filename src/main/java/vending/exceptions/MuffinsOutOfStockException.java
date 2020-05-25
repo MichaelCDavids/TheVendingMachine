@@ -1,4 +1,4 @@
-package vending.exception;
+package vending.exceptions;
 
 public class MuffinsOutOfStockException extends ProductNotFoundException {
     public MuffinsOutOfStockException(  ) {

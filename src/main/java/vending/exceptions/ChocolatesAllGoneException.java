@@ -1,4 +1,4 @@
-package vending.exception;
+package vending.exceptions;
 
 public class ChocolatesAllGoneException extends ProductNotFoundException {
     public ChocolatesAllGoneException( ) {
