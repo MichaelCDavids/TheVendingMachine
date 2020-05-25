@@ -10,16 +10,27 @@ public class Processor {
         this.commands = commands;
     }
 
-    public Output processInput( String input){
+    public boolean processInput( String input){
 
         Input userInput = new Input(input);
 
         if (commands.getCommand(userInput.getCommandType().name().toLowerCase()) instanceof Command){
             if (userInput.getCommandType().name().toLowerCase().equals("exit")){
-                return new Output(commands.getCommand(userInput.getCommandType().name().toLowerCase()).execute(userInput),false);
+                try {
+                    commands.getCommand(userInput.getCommandType().name().toLowerCase()).execute(userInput);
+                    return false;
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
             }
-            return new Output(commands.getCommand(userInput.getCommandType().name().toLowerCase()).execute(userInput),true);
+            try {
+                commands.getCommand(userInput.getCommandType().name().toLowerCase()).execute(userInput);
+                return true;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
-        return new Output("type help for a list of valid commands",true);
+        System.out.println("type help for a list of valid commands and products");
+        return true;
     }
 }
