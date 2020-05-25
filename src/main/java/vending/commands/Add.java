@@ -1,34 +1,31 @@
 package vending.commands;
 
-import vending.ExtendableVendingMachine;
 import vending.Input;
+import vending.VendingMachine;
+import vending.product.Chocolate;
 import vending.product.Muffin;
 import vending.product.SaltySnack;
 import vending.product.SoftDrink;
 
 public class Add implements Command {
-    ExtendableVendingMachine extendableVendingMachine;
+    VendingMachine vendingMachine;
 
-    public Add( ExtendableVendingMachine extendableVendingMachine){
-        this.extendableVendingMachine = extendableVendingMachine;
+    public Add( VendingMachine vendingMachine){
+        this.vendingMachine = vendingMachine;
     }
-    public String execute( Input input ) {
+
+    public void execute( Input input ) {
         if (input.getProduct().toLowerCase().equals("softdrink") && input.getQuantity() >= 1){
-            extendableVendingMachine.addStock(new SoftDrink(), input.getQuantity());
-            return "added "+input.getQuantity()+" softdrink(s) to stock";
+            vendingMachine.addStock(new SoftDrink(), input.getQuantity());
         }
         if (input.getProduct().toLowerCase().equals("muffin") && input.getQuantity() >= 1){
-            extendableVendingMachine.addStock(new Muffin(), input.getQuantity());
-            return "added "+input.getQuantity()+" muffin(s) to stock";
+            vendingMachine.addStock(new Muffin(), input.getQuantity());
         }
         if (input.getProduct().toLowerCase().equals("saltysnack") && input.getQuantity() >= 1){
-            extendableVendingMachine.addStock(new SaltySnack(), input.getQuantity());
-            return "added "+input.getQuantity()+" salty snack(s) to stock";
+            vendingMachine.addStock(new SaltySnack(), input.getQuantity());
         }
         if (input.getProduct().toLowerCase().equals("chocolate") && input.getQuantity() >= 1){
-            extendableVendingMachine.addStock(new SaltySnack(), input.getQuantity());
-            return "added "+input.getQuantity()+" chocolate(s) to stock";
+            vendingMachine.addStock(new Chocolate(), input.getQuantity());
         }
-        return "nothing added";
     }
 }

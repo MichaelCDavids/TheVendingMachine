@@ -1,28 +1,33 @@
 package vending.commands;
 
-import vending.ExtendableVendingMachine;
 import vending.Input;
+import vending.VendingMachine;
 import vending.product.*;
 
 public class Stock implements Command {
-    ExtendableVendingMachine extendableVendingMachine;
 
-    public Stock( ExtendableVendingMachine extendableVendingMachine){
-        this.extendableVendingMachine = extendableVendingMachine;
+    VendingMachine vendingMachine;
+
+    public Stock( VendingMachine vendingMachine){
+        this.vendingMachine = vendingMachine;
     }
-    public String execute( Input input ) {
+
+    public void execute( Input input ) {
         if (input.getProduct().toLowerCase().equals("softdrink")){
-            return "There is "+extendableVendingMachine.getStock(new SoftDrink())+" soft-drink(s) left in stock";
+            vendingMachine.getStock(new SoftDrink());
         }
         if (input.getProduct().toLowerCase().equals("muffin")){
-            return "There is "+extendableVendingMachine.getStock(new Muffin())+" muffin(s) left in stock";
+            vendingMachine.getStock(new Muffin());
         }
-        if (input.getProduct().toLowerCase().equals("saltysnack") && input.getQuantity() >= 1){
-            return "There is "+extendableVendingMachine.getStock(new SaltySnack())+" salty-snack(s) left in stock";
+        if (input.getProduct().toLowerCase().equals("saltysnack")){
+            vendingMachine.getStock(new SaltySnack());
         }
-        if (input.getProduct().toLowerCase().equals("chocolate") && input.getQuantity() >= 1){
-            return "There is "+extendableVendingMachine.getStock(new Chocolate())+" chocolate(s) left in stock";
+        if (input.getProduct().toLowerCase().equals("chocolate")){
+            vendingMachine.getStock(new Chocolate());
         }
-        return "There is "+extendableVendingMachine.getStock(new Product())+" product(s) left in stock";
+        if (input.getProduct().toLowerCase().equals("all")){
+            vendingMachine.getStock(new Product());
+        }
+
     }
 }

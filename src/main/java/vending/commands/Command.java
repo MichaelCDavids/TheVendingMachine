@@ -1,7 +1,8 @@
 package vending.commands;
 
 import vending.Input;
+import vending.exceptions.ProductNotFoundException;
 
 public interface Command {
-    String execute( Input input);
+    void execute( Input input) throws ProductNotFoundException;
 }

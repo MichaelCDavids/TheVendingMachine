@@ -1,48 +1,37 @@
 package vending.commands;
 
-import vending.ExtendableVendingMachine;
 import vending.Input;
-import vending.product.Chocolate;
-import vending.product.Muffin;
-import vending.product.SaltySnack;
-import vending.product.SoftDrink;
+import vending.VendingMachine;
+import vending.exceptions.ProductNotFoundException;
+import vending.product.*;
 
-public class Buy implements Command {
+public  class Buy implements Command {
 
-    ExtendableVendingMachine extendableVendingMachine;
+    VendingMachine vendingMachine;
 
-    public Buy( ExtendableVendingMachine extendableVendingMachine){
-        this.extendableVendingMachine = extendableVendingMachine;
+    public Buy( VendingMachine vendingMachine){
+        this.vendingMachine = vendingMachine;
     }
-    public String execute( Input input ) {
+
+    public void execute( Input input ) throws ProductNotFoundException {
+
+
         if (input.getProduct().toLowerCase().equals("softdrink") && input.getQuantity() >= 1){
-            if(extendableVendingMachine.getStock(new SoftDrink())-input.getQuantity() >= 0){
-                extendableVendingMachine.buy(new SoftDrink(), input.getQuantity());
-                return "bought "+input.getQuantity()+" softdrink(s)";
-            }
-            return "not enough soft drink stock left";
+            vendingMachine.buy(new SoftDrink(), input.getQuantity());
         }
-        if (input.getProduct().toLowerCase().equals("muffin") && input.getQuantity() >= 1){
-            if (extendableVendingMachine.getStock(new Muffin())-input.getQuantity() >= 0){
-                extendableVendingMachine.buy(new Muffin(), input.getQuantity());
-                return "bought "+input.getQuantity()+" muffin(s)";
-            }
-            return "not enough muffin stock left";
+        else if (input.getProduct().toLowerCase().equals("muffin") && input.getQuantity() >= 1){
+            vendingMachine.buy(new Muffin(), input.getQuantity());
         }
-        if (input.getProduct().toLowerCase().equals("saltysnack") && input.getQuantity() >= 1){
-            if(extendableVendingMachine.getStock(new SaltySnack())-input.getQuantity() >= 0){
-                extendableVendingMachine.buy(new SaltySnack(), input.getQuantity());
-                return "bought "+input.getQuantity()+" salty snack(s)";
-            }
-            return "not enough salty snack stock left";
+
+        else if (input.getProduct().toLowerCase().equals("saltysnack") && input.getQuantity() >= 1){
+            vendingMachine.buy(new SaltySnack(), input.getQuantity());
         }
-        if (input.getProduct().toLowerCase().equals("chocolate") && input.getQuantity() >= 1){
-            if (extendableVendingMachine.getStock(new Chocolate())-input.getQuantity() >= 0){
-                extendableVendingMachine.buy(new Chocolate(), input.getQuantity());
-                return "bought "+input.getQuantity()+" chocolate(s)";
-            }
-            return "not enough chocolate stock left";
+        else if (input.getProduct().toLowerCase().equals("chocolate") && input.getQuantity() >= 1){
+            vendingMachine.buy(new Chocolate(), input.getQuantity());
         }
-        return "Come back later when you've decided what you want to purchase";
+        else {
+            vendingMachine.buy(new Product());
+        }
+
     }
 }

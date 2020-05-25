@@ -1,5 +1,7 @@
 package vending.commands;
 
+import vending.Input;
+
 import java.util.Map;
 
 public class Commands {
@@ -13,6 +15,10 @@ public class Commands {
         if (availableCommands.containsKey(key)){
             return this.availableCommands.get(key);
         }
-        return new Help();
+        return new Help() {
+            public void executeVoid( Input input ) throws Exception {
+
+            }
+        };
     }
 }
